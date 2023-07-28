@@ -1,3 +1,3 @@
 # Kokoa Clone project
 
-CSS got so much
+HTML & CSS are so much fun
