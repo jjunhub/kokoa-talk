@@ -1,5 +1,4 @@
-
-.user-component{
+.user-component {
   justify-content: space-between;
 }
 
@@ -9,11 +8,15 @@
   align-items: center;
 }
 
-.user-component__column:last-child{
+.user-component__column:last-child {
   color:rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
-.user-component__avatar{
+.user-component__avatar {
   width: 70px;
   height: 70px;
   border-radius: 35%;
@@ -45,3 +48,7 @@
   font-weight: 400;
 }
 
+.user-component__time {
+  display: block;
+  margin-bottom: 5px;
+}
