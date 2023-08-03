@@ -1,23 +1,5 @@
-.find-icons {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 0px;
-}
-
-.find-icons__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.find-icons__icon i {
-  margin-bottom: 20px;
-}
-
 .recommended-friends {
   border-bottom: 1px solid var(--grey);
-  border-top: 1px solid var(--grey);
   padding: 25px 0px;
   color: rgba(0, 0, 0, 0.6);
 }
