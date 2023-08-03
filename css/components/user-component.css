@@ -30,9 +30,23 @@
 }
 
 .user-component__subtitle {
+  display: flex;
   margin-top : 7px;
   color : rgba(0,0,0,0.5);
   font-size: 16px;
+}
+
+.user-component__subtitle span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width : 15px;
+  height : 15px;
+  color: red;
+  border: 1px solid red;
+  margin-left: 5px;
+  border-radius: 100%
 }
 
 .user-component__avatar--xl {
