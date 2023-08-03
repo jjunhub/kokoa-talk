@@ -4,6 +4,7 @@
   justify-content: center;
   padding: 5px 3px;
   position: sticky;
+  background-color: rgba(256,256,256,1);
   width : 100%;
   top : 0;
   box-sizing: border-box;
