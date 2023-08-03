@@ -1,3 +1,3 @@
 # Kokoa Clone project
 
-HTML & CSS are so much fun!
+23.07.25 ~ 
