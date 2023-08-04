@@ -1,0 +1,25 @@
+.settings__setting {
+  opacity: 0.9;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings__setting-column{
+  padding : 20px 0px;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.settings__setting-column i {
+  margin-right : 15px;
+  width : 20px;
+  height : 20px;
+  opacity: 0.6;
+}
+
+.settings__setting-column:nth-child(2){
+  opacity: 0.6;
+}
+
