@@ -82,3 +82,67 @@
 .message-row--own .message-row__info {
   flex-direction: row-reverse;
 }
+
+.reply {
+  position : fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 3px;
+  box-sizing: border-box;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.reply .reply__column:first-child > i {
+  color: var(--grey);
+}
+
+.reply__column:last-child {
+  width :90%;
+  position: relative;
+  padding: 0px 10px;
+}
+
+.reply__column input {
+  height : 40px;
+  width : 100%;
+  padding-left : 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right : 15px;
+  top : 5px;
+  font-size: 15px;
+}
+
+.reply__column:last-child > i{
+  right: 55px;
+  top : 5px;
+  font-size: 30px;
+  color : var(--grey);
+}
+
+.reply__column:last-child button {
+  background-color: var(--yellow);
+  border-radius: 100%;
+  border : none;
+  width : 30px;
+  height: 30px;
+}
+
+.reply__column:last-child button:focus,
+.reply__column:last-child button:active {
+  outline: none;
+}
