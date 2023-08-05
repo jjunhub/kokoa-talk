@@ -12,11 +12,9 @@
   color: rgba(0, 0, 0, 0.2)
 }
 
-
 .friends-screen__channel {
   margin-top: 25px;
   border-top: 1px solid var(--grey);
-  
 }
 
 .friends-screen__channel-header {

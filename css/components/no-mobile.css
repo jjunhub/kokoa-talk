@@ -1,0 +1,29 @@
+#no-mobile {
+  position: absolute;
+  z-index: 99;
+  height: 100vh;
+  background-color: var(--yellow);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+#no-mobile span {
+  margin: 10px 0px ;
+}
+
+@media screen and (max-width:650px) {
+  #no-mobile {
+    display: none;
+  }
+}
+
+/* <div id="no-mobile">
+<span> Your screen is too big ;(</span>
+<span> Please access with mobile.</span>
+</div> */
