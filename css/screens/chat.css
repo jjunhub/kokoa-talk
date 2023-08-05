@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 200vh;
 }
 
 #chat-screen .alt-header {
@@ -11,9 +11,23 @@
 }
 .main-chat {
   display : flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+@keyframes fadeInFromNorth{
+  0% {
+    opacity: 0;
+    transform : none;
+  }
+  1% {
+    opacity: 0;
+    transform : translateY(-50px)
+  }
+  100% {
+    opacity: 1;
+    transform:none;
+  }
 }
 
 .chat__timestamp{
@@ -21,12 +35,29 @@
   padding: 10px;
   color: white;
   border-radius: 15px;
+  animation : fadeInFromNorth 1s linear;
+}
+
+@keyframes fadeInFromLeft{
+  0% {
+    opacity: 0;
+    transform : none;
+  }
+  1% {
+    opacity: 0;
+    transform : translateX(-50px)
+  }
+  100% {
+    opacity: 1;
+    transform:none;
+  }
 }
 
 .message-row {
   width : 100%;
   display:flex;
   padding : 10px 0px;
+  animation : fadeInFromLeft 1s linear;
 }
 
 .message-row img {
@@ -62,8 +93,24 @@
   margin : 0px 6px;
 }
 
+@keyframes fadeInFromRight{
+  0% {
+    opacity: 0;
+    transform : none;
+  }
+  1% {
+    opacity: 0;
+    transform : translateX(50px)
+  }
+  100% {
+    opacity: 1;
+    transform:none;
+  }
+}
+
 .message-row--own{
   justify-content: flex-end;
+  animation: fadeInFromRight 1s linear;
 }
 
 .message-row--own .message-row__bubble {
@@ -93,6 +140,7 @@
   justify-content: space-between;
   padding: 6px 3px;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -117,6 +165,7 @@
   box-sizing: border-box;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
