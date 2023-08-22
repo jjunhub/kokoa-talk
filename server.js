@@ -7,6 +7,7 @@ const chatRouter = require('./routes/chat');
 const moreRouter = require('./routes/more');
 const settingRouter = require('./routes/setting');
 const findRouter = require('./routes/find');
+const loginRouter = require('./routes/login');
 
 const app = express();
 const port = 8888;
@@ -19,15 +20,6 @@ app.set('view engine', 'html');
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-let session = {};
-
-app.post('/login', (req,res)=> {
-  const {username, password} = req.body;
-  /* Login Logic part */
-  //console.log("Login successful!");
-  session = username;
-  res.redirect('/friends');
-})
 
 // End with .html
 app.get('/:pageName.html', (req, res) => {
@@ -35,6 +27,7 @@ app.get('/:pageName.html', (req, res) => {
   res.redirect(`${pageName}`);
 });
 
+app.use('/login', loginRouter);
 app.use('/', indexRouter);
 app.use('/friends', friendsRouter);
 app.use('/setting', settingRouter);
