@@ -1,6 +1,7 @@
 # Kokoa Clone project
-
-  https://jjunhub.github.io/kokoa-clone/
+###  Check website view!
+ 👉 https://jjunhub.github.io/kokoa-talk/
+  
 
 #### ⚠️ You have to make the window smaller to see it!
 
