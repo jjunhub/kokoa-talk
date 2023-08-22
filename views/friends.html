@@ -2,11 +2,11 @@
 <html lang="ko">
 
 <head>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>More - Kokoa Talk</title>
+  <title>Friends - Kokoa Talk</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
   </div>
 
   <header class="screen-header">
-    <h1 class="screen-header__title">More</h1>
+    <h1 class="screen-header__title">Friends</h1>
     <div class="screen-header__icons">
       <span>
         <i class="fas fa-search fa-lg"></i>
@@ -34,7 +34,6 @@
       <span>
         <i class="fas fa-music fa-lg"></i>
       </span>
-
       <a href="setting.html">
         <span class="screen-header__cog">
           <i class="fas fa-cog fa-lg"></i>
@@ -44,93 +43,62 @@
     </div>
   </header>
 
+  <a id="friends-display-link">
+    <i class="fas fa-info-circle"></i>
+    Friends' Names Display
+    <i class="fas fa-chevron-right fa-xs"></i>
+  </a>
+
   <main class="main-screen">
     <div class="user-component">
-
-
       <div class="user-component__column">
         <img src="https://avatars.githubusercontent.com/u/107465938?v=4"
           class="user-component__avatar user-component__avatar--xl">
         <div class="user-component__text">
           <h4 class="user-component__title"> SangJun </h4>
-          <h6 class="user-component__subtitle"> +82 123-456-7890
-            <span>!</span>
-          </h6>
+          <!-- <h6 class="user-component__subtitle"> this text subtitle</h6> -->
         </div>
       </div>
 
       <div class="user-component__column">
-        <i class="far fa-comment-alt fa-2x"></i>
-      </div>
 
-    </div>
-    <div class="icon-row">
-      <div class="icon-row__icon">
-        <i class="far fa-calendar fa-2x"></i>
-        <span>
-          Calendar
-        </span>
-      </div>
-      <div class="icon-row__icon">
-        <i class="fas fa-gift fa-2x"></i>
-        <span>
-          Gift
-        </span>
-      </div>
-      <div class="icon-row__icon">
-        <i class="far fa-smile fa-2x"></i>
-        <span>
-          Emoticon
-        </span>
-      </div>
-      <div class="icon-row__icon">
-        <i class="far fa-envelope fa-2x"></i>
-        <span>
-          Mail
-        </span>
-      </div>
-
-      <div class="icon-row__icon">
-        <i class="fas fa-file-invoice-dollar fa-2x"></i>
-        <span>
-          Account
-        </span>
-      </div>
-
-      <div class="icon-row__icon">
-        <i class="fas fa-file fa-2x"></i>
-        <span>
-          File
-        </span>
       </div>
     </div>
 
-    <div class="external-link">
-      External Link
-    </div>
+    <div class="friends-screen__channel">
+      <div class="friends-screen__channel-header">
+        <span>Channel</span>
+        <i class="fas fa-chevron-up fa-xs"></i>
+      </div>
 
-    <div class="icon-row">
-        <a class="icon-row__icon" href="https://github.com/jjunhub" target="_blank">
-          <i class="fab fa-github fa-2x"></i>
-          <span>
-            GitHub
-          </span>
-        </a>
+      <div class="user-component">
+        <div class="user-component__column">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrn16x5e8-5fUYaCJSEd-JWmQuxULchdbgA1yp8vFYaR7RjTBjetu67gSFFnyR_hldS4&usqp=CAU"
+            class="user-component__avatar user-component__avatar--sm">
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold"> Channel </h4>
+            <!-- <h6 class="user-component__subtitle"> this text subtitle</h6> -->
+          </div>
+        </div>
 
-        <a class="icon-row__icon" href="https://velog.io/@jjunhub" target="_blank">
-          <i class="fas fa-home fa-2x"></i>
-          <span>
-            Velog
-          </span>
-        </a>
+        <div class="user-component__column">
+          <div>
+            <span>2</span>
+            <i class="fas fa-chevron-right fa-xs"></i>
+          </div>
+        </div>
+
       </div>
     </div>
+    </div>
+
   </main>
+
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__btn">
         <a class="nav__link" href="friends.html">
-          <i class="far fa-user fa-2x"></i></a>
+          <i class="fas fa-user fa-2x"></i></a>
       </li>
       <li class="nav__btn">
         <a class="nav__link" href="chats.html">
@@ -157,7 +125,6 @@
     <span> Please access with mobile.</span>
   </div>
 
+  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </body>
-<script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
-
 </html>
