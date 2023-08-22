@@ -1,5 +1,12 @@
 const express = require('express');
 const path = require('path');
+const indexRouter = require('./routes/index');
+const friendsRouter = require('./routes/friends');
+const chatsRouter = require('./routes/chats');
+const chatRouter = require('./routes/chat');
+const moreRouter = require('./routes/more');
+const settingRouter = require('./routes/setting');
+const findRouter = require('./routes/find');
 
 const app = express();
 const port = 8888;
@@ -13,10 +20,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 let session = {};
-
-app.get('/', (req,res) => {
-  res.render('index');
-})
 
 app.post('/login', (req,res)=> {
   const {username, password} = req.body;
@@ -32,30 +35,13 @@ app.get('/:pageName.html', (req, res) => {
   res.redirect(`${pageName}`);
 });
 
-app.get('/friends', (req,res)=> {
-  username = session
-  res.render('friends', {username});
-});
-
-app.get('/setting', (req,res)=> {
-  res.render('setting');
-});
-
-app.get('/more', (req,res)=> {
-  res.render('more');
-});
-
-app.get('/chat', (req,res)=> {
-  res.render('chat');
-});
-
-app.get('/chats', (req,res)=> {
-  res.render('chats');
-});
-
-app.get('/find', (req,res)=> {
-  res.render('find');
-});
+app.use('/', indexRouter);
+app.use('/friends', friendsRouter);
+app.use('/setting', settingRouter);
+app.use('/more', moreRouter);
+app.use('/chat', chatRouter);
+app.use('/chats', chatsRouter);
+app.use('/find',findRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
