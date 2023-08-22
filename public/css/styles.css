@@ -1,23 +1,23 @@
-@import "/public/css/reset.css";
-@import "/public/css/variable.css";
+@import "/css/reset.css";
+@import "/css/variable.css";
 
 /* Components */
-@import "/public/css/components/status-bar.css";
-@import "/public/css/components/nav-bar.css";
-@import "/public/css/components/screen-header.css";
-@import "/public/css/components/user-component.css";
-@import "/public/css/components/badge.css";
-@import "/public/css/components/icon-row.css";
-@import "/public/css/components/alt-screen-header.css";
-@import "/public/css/components/no-mobile.css";
+@import "/css/components/status-bar.css";
+@import "/css/components/nav-bar.css";
+@import "/css/components/screen-header.css";
+@import "/css/components/user-component.css";
+@import "/css/components/badge.css";
+@import "/css/components/icon-row.css";
+@import "/css/components/alt-screen-header.css";
+@import "/css/components/no-mobile.css";
 
 /* Screens */
-@import "/public/css/screens/login.css";
-@import "/public/css/screens/friends.css";
-@import "/public/css/screens/find.css";
-@import "/public/css/screens/more.css";
-@import "/public/css/screens/settings.css";
-@import "/public/css/screens/chat.css";
+@import "/css/screens/login.css";
+@import "/css/screens/friends.css";
+@import "/css/screens/find.css";
+@import "/css/screens/more.css";
+@import "/css/screens/settings.css";
+@import "/css/screens/chat.css";
 
 html {
   height: 100%;
