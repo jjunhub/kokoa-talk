@@ -6,8 +6,8 @@ router.post('/', async (req, res) => {
   try {
     dbPool.getConnection((err, connection) => {
       const { username, password } = req.body;
-      const selectUser = `SELECT * FROM users WHERE username='${username}' AND password='${password}'`;
-      connection.query(selectUser, (error, results) => {
+      const selectUser = `SELECT * FROM users WHERE username = ? AND password= ?`;
+      connection.query(selhvectUser, [username, password], (error, results) => {
         if (results.length > 0) {
           const foundUsername = results[0].username;
           res.redirect(`/friends?username=${foundUsername}`);
