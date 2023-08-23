@@ -1,7 +1,20 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const mysql = require('mysql');
+const session = require('express-session');
+const sessionConfig = require('./config/sessionConfig');
+
+const app = express();
+const port = 8888;
+const viewsPath = path.join(__dirname, 'views');
+
+app.engine('.html', require('ejs').renderFile);
+app.use(express.static('public'));
+app.set('views', viewsPath); 
+app.set('view engine', 'html');
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+app.use(session(sessionConfig));
 
 const indexRouter = require('./routes/index');
 const friendsRouter = require('./routes/friends');
@@ -11,37 +24,6 @@ const moreRouter = require('./routes/more');
 const settingRouter = require('./routes/setting');
 const findRouter = require('./routes/find');
 const loginRouter = require('./routes/login');
-
-const app = express();
-const port = 8888;
-const viewsPath = path.join(__dirname, 'views');
-
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
-});
-
-db.connect((err)=> {
-  if (err) console.error('Database connection error: ', err);
-  else console.log('Database connected!');
-})
-
-db.query('SELECT * FROM USERS', (err, res) => {
-  if(err) console.error('Databese query error: ', err);
-  else {
-    console.log(res);
-  }
-});
-
-app.engine('.html', require('ejs').renderFile);
-app.use(express.static('public'));
-app.set('views', viewsPath); 
-app.set('view engine', 'html');
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
-
 
 // End with .html
 app.get('/:pageName.html', (req, res) => {
