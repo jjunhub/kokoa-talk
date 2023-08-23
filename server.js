@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const mysql = require('mysql');
 
 const indexRouter = require('./routes/index');
 const friendsRouter = require('./routes/friends');
@@ -15,25 +14,6 @@ const loginRouter = require('./routes/login');
 const app = express();
 const port = 8888;
 const viewsPath = path.join(__dirname, 'views');
-
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
-});
-
-db.connect((err)=> {
-  if (err) console.error('Database connection error: ', err);
-  else console.log('Database connected!');
-})
-
-db.query('SELECT * FROM USERS', (err, res) => {
-  if(err) console.error('Databese query error: ', err);
-  else {
-    console.log(res);
-  }
-});
 
 app.engine('.html', require('ejs').renderFile);
 app.use(express.static('public'));
