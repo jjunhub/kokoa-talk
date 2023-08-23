@@ -1,15 +1,8 @@
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
-const {dbPool} = require('./db'); 
+const {dbPool, dbOption} = require('./db');
 
-const dbOption = {
-  host: process.env.DB_HOST || '127.0.0.1',
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
-}
-
-const sessionStore = new MySQLStore(dbOption, dbPool);
+const sessionStore = new MySQLStore(dbOption, dbPool); // Pool 방식으로 MySQL과 접근 진행
 
 const sessionConfig = {
   key: 'session_cookie_name',
