@@ -1,15 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-
-const indexRouter = require('./routes/index');
-const friendsRouter = require('./routes/friends');
-const chatsRouter = require('./routes/chats');
-const chatRouter = require('./routes/chat');
-const moreRouter = require('./routes/more');
-const settingRouter = require('./routes/setting');
-const findRouter = require('./routes/find');
-const loginRouter = require('./routes/login');
+const session = require('express-session');
+const sessionConfig = require('./config/sessionConfig');
 
 const app = express();
 const port = 8888;
@@ -21,7 +14,16 @@ app.set('views', viewsPath);
 app.set('view engine', 'html');
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+app.use(session(sessionConfig));
 
+const indexRouter = require('./routes/index');
+const friendsRouter = require('./routes/friends');
+const chatsRouter = require('./routes/chats');
+const chatRouter = require('./routes/chat');
+const moreRouter = require('./routes/more');
+const settingRouter = require('./routes/setting');
+const findRouter = require('./routes/find');
+const loginRouter = require('./routes/login');
 
 // End with .html
 app.get('/:pageName.html', (req, res) => {

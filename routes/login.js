@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const dbPool = require('../config/db');
+const {dbPool} = require('../config/db');
 
 router.post('/', async (req, res) => {
   try {
     dbPool.getConnection((err, connection) => {
       const { username, password } = req.body;
       const selectUser = `SELECT * FROM users WHERE username = ? AND password= ?`;
-      connection.query(selhvectUser, [username, password], (error, results) => {
+      connection.query(selectUser, [username, password], (error, results) => {
         if (results.length > 0) {
-          const foundUsername = results[0].username;
-          res.redirect(`/friends?username=${foundUsername}`);
+          req.session.username =  results[0].username;
+          res.redirect(`/friends`);
         } else {
           res.redirect('/');
         }
@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
       });
     });
   } catch (error) {
-    console.log("error: ", error);
+    console.error("error: ", error);
   }
 });
 
