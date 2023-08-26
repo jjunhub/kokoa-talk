@@ -1,0 +1,22 @@
+.text-box {
+  display : flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.text-box__column {
+  padding: 10px 0px;
+  margin: 10px 0px;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.text-box__column::placeholder {
+  color: var(--grey);
+}
+
+.text-box__column:focus {
+  border-color: var(--yellow);
+}
