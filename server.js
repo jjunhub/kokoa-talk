@@ -8,10 +8,9 @@ const app = express();
 const port = 8888;
 const viewsPath = path.join(__dirname, 'views');
 
-app.engine('.html', require('ejs').renderFile);
 app.use(express.static('public'));
 app.set('views', viewsPath); 
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(session(sessionConfig));
@@ -24,12 +23,6 @@ const moreRouter = require('./routes/more');
 const settingRouter = require('./routes/setting');
 const findRouter = require('./routes/find');
 const loginRouter = require('./routes/login');
-
-// End with .html
-app.get('/:pageName.html', (req, res) => {
-  const pageName = req.params.pageName;
-  res.redirect(`${pageName}`);
-});
 
 app.use('/login', loginRouter);
 app.use('/', indexRouter);
