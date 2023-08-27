@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0px;
+  align-items: center;
   border-bottom: 1px solid var(--grey);
 }
 
@@ -16,6 +17,10 @@
 
 .icon-row__icon i {
   margin-bottom: 20px;
+}
+
+.icon-row__icon span {
+  text-align: center;
 }
 
 .icon-row:last-child {

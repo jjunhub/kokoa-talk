@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Kokoa</title>
+</head>
+
+<body>
+  <div class="status-bar">
+    <div class="status-bar__cloumn">
+      <span>No Service</span>
+      <i class="fas fa-wifi"></i>
+    </div>
+    <div class="status-bar__cloumn">
+      <span>18:43</span>
+    </div>
+    <div class="status-bar__cloumn">
+      <span>110%</span>
+      <i class="fas fa-battery-full fa-lg"></i>
+      <i class="fas fa-bolt"></i>
+    </div>
+  </div>
+
+  <header class="signup-header">
+    <h1 class="sig-header__title">Create your account for service.</h1>
+  </header>
+
+  <div class="signup-body">
+    <form class="signup-form">
+      <div class="form-group">
+        <label class="form-label" for="email">이메일 주소 <span>*</span></label>
+        <div class="form-linebox">
+          <input name="email" required type="email" id="email" placeholder="Email" class="form-input">
+          <button class="form-submit">Check</button>
+        </div>
+        <p class="form-info">코코아 계정으로 사용할 이메일을 입력해주세요.</p>
+      </div>
+    </form>
+  </div>
+
+  <div class="signup-body">
+    <form action="friends.html" method="post" class="signup-form">
+      <div class="form-group">
+        <label class="form-label" for="password">비밀번호 <span>*</span></label>
+        <input name="password" required type="password" id="password" placeholder="Password" class="form-input">
+        <input name="password-check" required type="password" placeholder="Password Check" class="form-input">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="nickname">닉네임 <span>*</span></label>
+        <input name="nickname" required type="text" id="nickname" placeholder="Nickname" class="form-input">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="phonenumber">전화번호</label>
+        <input name="phonenumber" type="tel" id="phonenumber" placeholder="010-1234-1234" class="form-input">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Create" class="form-submit">
+      </div>
+    </form>
+  </div>
+
+
+</body>
+<script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+
+</html>

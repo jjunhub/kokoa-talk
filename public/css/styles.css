@@ -10,6 +10,7 @@
 @import "/css/components/icon-row.css";
 @import "/css/components/alt-screen-header.css";
 @import "/css/components/no-mobile.css";
+@import "/css/components/text-box.css";
 
 /* Screens */
 @import "/css/screens/login.css";
@@ -18,6 +19,7 @@
 @import "/css/screens/more.css";
 @import "/css/screens/settings.css";
 @import "/css/screens/chat.css";
+@import "/css/screens/signup.css";
 
 html {
   height: 100%;
