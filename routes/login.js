@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
       const selectUser = `SELECT * FROM users WHERE email = ? AND password= ?`;
       connection.query(selectUser, [email, password], (error, results) => {
         if (results.length > 0) {
-          req.session.username =  results[0].username;
+          req.session.nickname =  results[0].nickname;
           res.redirect('/friends');
         } else {
           res.redirect('/');
