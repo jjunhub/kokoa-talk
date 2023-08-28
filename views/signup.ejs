@@ -30,12 +30,13 @@
   </header>
 
   <div class="signup-body">
-    <form class="signup-form">
+    <form class="signup-form" action="/check-email" method="POST">
       <div class="form-group">
         <label class="form-label" for="email">이메일 주소 <span>*</span></label>
         <div class="form-linebox">
-          <input name="email" required type="email" id="email" placeholder="Email" class="form-input">
-          <button class="form-submit">Check</button>
+          <input name="email" required type="email" id="email" placeholder="Email" class="form-input" <% if
+            (emailChecked) { %> readonly value="<%= emailValue %>" <% } %>>
+              <button class="form-submit" <% if (emailChecked) { %> disabled <% } %>>Check</button>
         </div>
         <p class="form-info">코코아 계정으로 사용할 이메일을 입력해주세요.</p>
       </div>
@@ -43,7 +44,7 @@
   </div>
 
   <div class="signup-body">
-    <form action="friends.html" method="post" class="signup-form">
+    <form action="/signup" method="post" class="signup-form">
       <div class="form-group">
         <label class="form-label" for="password">비밀번호 <span>*</span></label>
         <input name="password" required type="password" id="password" placeholder="Password" class="form-input">

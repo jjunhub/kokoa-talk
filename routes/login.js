@@ -5,12 +5,12 @@ const {dbPool} = require('../config/db');
 router.post('/', async (req, res) => {
   try {
     dbPool.getConnection((err, connection) => {
-      const { username, password } = req.body;
-      const selectUser = `SELECT * FROM users WHERE username = ? AND password= ?`;
-      connection.query(selectUser, [username, password], (error, results) => {
+      const { email, password } = req.body;
+      const selectUser = `SELECT * FROM users WHERE email = ? AND password= ?`;
+      connection.query(selectUser, [email, password], (error, results) => {
         if (results.length > 0) {
           req.session.username =  results[0].username;
-          res.redirect(`/friends`);
+          res.redirect('/friends');
         } else {
           res.redirect('/');
         }

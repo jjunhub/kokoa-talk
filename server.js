@@ -23,6 +23,8 @@ const moreRouter = require('./routes/more');
 const settingRouter = require('./routes/setting');
 const findRouter = require('./routes/find');
 const loginRouter = require('./routes/login');
+const signUpRouter = require('./routes/signup');
+const checkEmailRouter = require('./routes/check-email');
 
 app.use('/login', loginRouter);
 app.use('/', indexRouter);
@@ -32,6 +34,8 @@ app.use('/more', moreRouter);
 app.use('/chat', chatRouter);
 app.use('/chats', chatsRouter);
 app.use('/find',findRouter);
+app.use('/signup', signUpRouter);
+app.use('/check-email', checkEmailRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
