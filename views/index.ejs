@@ -32,14 +32,22 @@
     </p>
   </header>
 
-  <form action="/login" method="post" id="login-form">
-    <input name = "username" required type="text" placeholder="Email or phone number">
-    <input name = "password" required type="password" placeholder="password">
-    <input type="submit" value="Log In">
-    <a href="#">Find Kokoa Account or Password</a>
-  </form>
+  <div class = welcome-body>
+    <form action="/login" method="post" id="login-form">
+      <div class="text-box">
+        <input name="email" required type="text" placeholder="Email" class="text-box__column">
+        <input name="password" required type="password" placeholder="Password" class="text-box__column">
+      </div>
+      <input type="submit" value="Log In">
+    </form>
+    <form action="/signup" method="get" id="signup-form">
+      <input type="submit" value="Sign Up">
+    </form>
+    <a href="#" id="find-account">Find Kokoa Account or Password</a>
+  </div>
 
-  <div id ="splash-screen">
+
+  <div id="splash-screen">
     <i class="fas fa-comment"> </i>
   </div>
 
